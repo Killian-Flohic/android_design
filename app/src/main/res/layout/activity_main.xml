@@ -4,91 +4,108 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    
-    android:background="@drawable/gradient_blue">
+    android:background="@drawable/gradient_blue"
+
+    tools:context=".MainActivity">
 
     // City
+
     <TextView
         android:id="@+id/cityTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
         android:text="City : "
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="24dp"/>
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="139dp" />
 
     <TextView
         android:id="@+id/textViewCityName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
         android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="@id/cityTitle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/cityTitle"
-        app:layout_constraintTop_toTopOf="@id/cityTitle" />
+        tools:layout_editor_absoluteX="167dp"
+        tools:layout_editor_absoluteY="139dp" />
+
 
     // Temperature
+
+    // Weather informations
+
     <TextView
         android:id="@+id/temperatureTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Temperature : "
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cityTitle"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="24dp"/>
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="237dp" />
 
     <TextView
         android:id="@+id/textViewActualTemperature"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
         android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="@+id/temperatureTitle"
-        app:layout_constraintStart_toEndOf="@+id/temperatureTitle"
-        app:layout_constraintTop_toTopOf="@+id/temperatureTitle"
-        app:layout_constraintStart_toStartOf="@+id/textViewCityName"
-        app:layout_constraintEnd_toEndOf="@+id/textViewCityName"/>
+        tools:layout_editor_absoluteX="243dp"
+        tools:layout_editor_absoluteY="237dp" />
 
-    // Weather informations
     <TextView
         android:id="@+id/weatherTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Weather : "
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/temperatureTitle"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="24dp"/>
-
-    <TextView
-        android:id="@+id/textViewMainWeather"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="@+id/weatherTitle"
-        app:layout_constraintStart_toEndOf="@+id/weatherTitle"
-        app:layout_constraintTop_toTopOf="@+id/weatherTitle"
-        app:layout_constraintStart_toStartOf="@+id/textViewCityName"
-        app:layout_constraintEnd_toEndOf="@+id/textViewCityName"/>
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="445dp" />
 
     <TextView
         android:id="@+id/textViewDescriptionWeather"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
         android:text="TextView"
-        app:layout_constraintStart_toStartOf="@+id/textViewMainWeather"
-        app:layout_constraintTop_toBottomOf="@+id/textViewMainWeather"
-        app:layout_constraintEnd_toEndOf="@+id/textViewMainWeather"/>
+        tools:layout_editor_absoluteX="292dp"
+        tools:layout_editor_absoluteY="446dp" />
 
+    <TextView
+        android:id="@+id/textViewMainWeather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="243dp"
+        tools:layout_editor_absoluteY="275dp" />
+
+    <ImageView
+        android:layout_width="114dp"
+        android:layout_height="99dp"
+        android:src="@drawable/soleil2"
+        tools:layout_editor_absoluteX="111dp"
+        tools:layout_editor_absoluteY="195dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="37dp"
+        android:layout_height="25dp"
+        android:src="@drawable/goutte"
+        app:layout_constraintEnd_toStartOf="@+id/imageView3"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="381dp" />
+
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="58dp"
+        android:layout_height="50dp"
+        android:src="@drawable/uv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.524"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="373dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="34dp"
+        android:layout_height="33dp"
+        android:src="@drawable/thermometer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        tools:layout_editor_absoluteY="381dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
